@@ -17,8 +17,8 @@ export class MenuComponent implements OnInit {
 
   }
 
-  getBakery() {
-    this.products.getBakery()
+  getBakery(groupName) {
+    this.products.getBakery(groupName)
       .then((result) => {
         this.BakeryArray = result;
       })

@@ -11,9 +11,9 @@ export class ProductsService {
     private http: Http
   ) { }
 
-  getBakery() {
+  getBakery(groupName) {
     return this.http.get(
-      this.baseUrl + 'api/menu'
+      this.baseUrl + 'api/menu/'+groupName
     )
     .toPromise()
     .then( result => result.json());

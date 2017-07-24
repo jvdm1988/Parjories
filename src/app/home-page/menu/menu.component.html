@@ -2,21 +2,25 @@
 <h2> Menu </h2>
 
 <div class="menu-buttons">
-<button (click)="getBakery()"> Cupcakes </button>
-<button (click)="getBakery()"> Macarons </button>
-<button (click)="getBakery()"> Pies & Cakes </button>
+<button (click)="getBakery('Cupcakes')"> Cupcakes </button>
+<button (click)="getBakery('Macarons')"> Macarons </button>
+<button (click)="getBakery('Pies & Cakes')"> Pies & Cakes </button>
 </div>
 
+<hr>
 <br>
 
-<ul *ngFor = "let dessert of dessertArray">
+<ul *ngFor = "let bakery of BakeryArray">
   <li>
-    <img src="assets/{{dessert.photoUrl}}">
-    <h3> {{ dessert.name }}</h3>
-    <p> ${{dessert.price }}</p>
-    <button> Add to Cart </button>
+    <img src="assets/{{bakery.photoUrl}}">
+    <h3> {{ bakery.name }}</h3>
+    <p> ${{bakery.price }}</p>
+    <a [routerLink]="['/Edit']"> Edit</a> |
+    <a [routerLink]="['/Delete']"> Delete</a>
   </li>
 </ul>
 
+<br>
+<br>
 
 </div>
