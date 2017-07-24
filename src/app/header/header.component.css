@@ -1,0 +1,38 @@
+.header {
+  background-color: #727271;
+  /*background: linear-gradient(180deg, #f9576f, white);*/
+}
+
+.header-logo {
+  font-family: "Cabin Condensed";
+  color: #eaead3;
+  font-size: 32px;
+  text-shadow: 1px 1px white;
+  letter-spacing: 3px;
+  padding-left: 10px;
+  font-weight: lighter;
+}
+
+p {
+  padding: 7px;
+}
+
+nav {
+  float: right;
+  margin-top: -50px;
+  margin-right: 10px;
+}
+
+nav a {
+  display: inline;
+  margin-right: 20px;
+  letter-spacing: 3px;
+  font-weight: lighter;
+  font-size: 18px;
+  color: white;
+}
+
+nav button {
+  color: #565656;
+  background-color: #d0e0d9;
+}

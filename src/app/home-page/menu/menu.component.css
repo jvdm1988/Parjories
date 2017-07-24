@@ -1,0 +1,28 @@
+* {
+  text-align: center;
+}
+
+button {
+  margin: 20px;
+}
+
+ul {
+  display: inline-block;
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  list-style: none;
+  text-align: center;
+}
+
+img {
+  height: 140px;
+  width: 100px;
+}
+
+h3 {
+  font-weight: 200;
+  font-size: 20px;
+  color: #ef4a6d;
+  margin-top: -5px;
+}

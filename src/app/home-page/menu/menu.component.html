@@ -1,0 +1,22 @@
+<div class="menu">
+<h2> Menu </h2>
+
+<div class="menu-buttons">
+<button (click)="getBakery()"> Cupcakes </button>
+<button (click)="getBakery()"> Macarons </button>
+<button (click)="getBakery()"> Pies & Cakes </button>
+</div>
+
+<br>
+
+<ul *ngFor = "let dessert of dessertArray">
+  <li>
+    <img src="assets/{{dessert.photoUrl}}">
+    <h3> {{ dessert.name }}</h3>
+    <p> ${{dessert.price }}</p>
+    <button> Add to Cart </button>
+  </li>
+</ul>
+
+
+</div>
