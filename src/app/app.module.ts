@@ -11,8 +11,11 @@ import { ContactComponent } from './home-page/contact/contact.component';
 import { TestimonialsComponent } from './home-page/testimonials/testimonials.component';
 import { MenuComponent } from './home-page/menu/menu.component';
 import { ProductsService } from './services/products.service';
+import { AuthService } from './services/auth.service';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
+import { LoginComponent } from './login/login.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     TestimonialsComponent,
     MenuComponent,
     HomePageComponent,
+    LoginComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,9 @@ import { HomePageComponent } from './home-page/home-page.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ProductsService],
+  providers: [
+    ProductsService,
+    AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

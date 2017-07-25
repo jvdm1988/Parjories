@@ -24,4 +24,11 @@ export class MenuComponent implements OnInit {
       })
   }
 
+  addToCart(id) {
+    this.products.addToCart(id)
+      .then((result) => {
+        console.log(result);
+      })
+  }
+
 }

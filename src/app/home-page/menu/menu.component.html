@@ -10,15 +10,18 @@
 <hr>
 <br>
 
+<div class="menu-items">
 <ul *ngFor = "let bakery of BakeryArray">
   <li>
     <img src="assets/{{bakery.photoUrl}}">
     <h3> {{ bakery.name }}</h3>
     <p> ${{bakery.price }}</p>
+    <button (click)="addToCart(bakery._id)" > Add to Cart </button><br>
     <a [routerLink]="['/Edit']"> Edit</a> |
     <a [routerLink]="['/Delete']"> Delete</a>
   </li>
 </ul>
+</div>
 
 <br>
 <br>

@@ -18,4 +18,16 @@ export class ProductsService {
     .toPromise()
     .then( result => result.json());
   }
+
+  addToCart(id) {
+    console.log(id);
+    return this.http.post(
+      this.baseUrl + 'api/addToCart/',
+      { idToAdd: id},
+      { withCredentials: true }
+    )
+    .toPromise()
+    .then (result => result.json());
+
+  }
 }

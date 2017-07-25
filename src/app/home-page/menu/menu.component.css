@@ -15,6 +15,15 @@ h2 {
 
 button {
   margin: 20px;
+  color: #b3aca7;
+  background-color: #eff1f2;
+  border: 1px solid #b3aca7;
+  border-radius: 3px;
+  width: 120px;
+}
+
+.menu-items {
+  margin-right: 60px;
 }
 
 ul {
@@ -27,8 +36,8 @@ ul {
 }
 
 img {
-  height: 100px;
-  width: 100px;
+  height: 180px;
+  width: 190px;
 }
 
 h3 {
@@ -36,8 +45,4 @@ h3 {
   font-size: 20px;
   color: #ef4a6d;
   margin-top: -5px;
-}
-
-a {
-  color: black;
 }

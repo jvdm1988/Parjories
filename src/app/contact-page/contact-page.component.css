@@ -1,38 +1,28 @@
-
-
-.contact-left {
-  background-color: #e3eced;
-  padding: 50px;
-  text-align: center;
+.contact-page {
+  background-image: url("/assets/contact.jpg");
+  background-size: cover;
+  height: 1000px;
+  margin-left: -150px;
 }
 
-.text-header {
-  text-align: center;
-  font-weight: lighter;
-  font-size: 36px;
-  color: #ef4a6d;
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto:900');
 
-p{
-  text-align: center;
-  font-weight: lighter;
-  font-size: 18px;
-  color: #ef4a6d;
-}
 
-button {
-    margin: 20px;
-    color: #b3aca7;
-    background-color: #eff1f2;
-    border: 1px solid #b3aca7;
-    border-radius: 3px;
-    padding: 5px 15px;
+h2 {
+  margin-top: -10px;
+  padding-top: 110px;
+  margin-left: 600px;
+  font-size: 150px;
+  letter-spacing: -8px;
+  font-weight: bolder;
+  font-family: "Roboto";
+  text-shadow: 2px 2px #aca49c;
+  color: white;
+  opacity: 0.7;
 }
 
 
-/* Form */
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
-
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #aca49c;
   font-size: 0.875em;
@@ -69,11 +59,12 @@ input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
   color: #bbb5af;
 }
 
+
 /* on hover placeholder */
 
 input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
   color: #e2dedb;
-  font-size: 0.875em;
+  font-size: 16px;
 }
 
 input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
@@ -82,7 +73,7 @@ input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-inpu
 
 input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
   color: #e2dedb;
-  font-size: 0.875em;
+  font-size: 16px;
 }
 
 input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
@@ -91,7 +82,7 @@ input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
 
 input:hover::placeholder, textarea:hover::placeholder {
   color: #e2dedb;
-  font-size: 0.875em;
+  font-size: 16px;
 }
 
 input:hover:focus::placeholder, textarea:hover:focus::placeholder {
@@ -100,7 +91,7 @@ input:hover:focus::placeholder, textarea:hover:focus::placeholder {
 
 input:hover::placeholder, textarea:hover::placeholder {
   color: #e2dedb;
-  font-size: 0.875em;
+  font-size: 16px;
 }
 
 input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
@@ -113,34 +104,23 @@ body {
   color: #b3aca7;
 }
 
-header {
-  position: relative;
-  margin: 100px 0 25px 0;
-  font-size: 2.3em;
-  text-align: center;
-  letter-spacing: 7px;
-}
-
 #form {
   position: relative;
-  width: 800px;
-  margin: 50px auto 100px auto;
+  width: 525px;
+  margin-left: 650px;
+  margin-top: -40px;
 }
 
 input {
   font-family: 'Lato', sans-serif;
-  font-size: 0.875em;
-  width: 800px;
-  height: 60px;
-  padding: 0px 15px 0px 15px;
-
+  font-size: 16px;
+  width: 525px;
+  height: 70px;
+  padding: 0px 15px;
   background: transparent;
-  outline: none;
   color: #726659;
-
   border: solid 1px #b3aca7;
   border-bottom: none;
-
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -153,21 +133,16 @@ input:hover {
 }
 
 textarea {
-  width: 800px;
-  max-width: 800px;
-  height: 110px;
-  max-height: 110px;
+  width: 525px;
+  max-width: 525px;
+  height: 180px;
+  max-height: 180px;
   padding: 15px;
-
   background: transparent;
-  outline: none;
-
   color: #726659;
   font-family: 'Lato', sans-serif;
-  font-size: 0.875em;
-
+  font-size: 16px;
   border: solid 1px #b3aca7;
-
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -180,18 +155,12 @@ textarea:hover {
 }
 
 #submit {
-  width: 800px;
-
-  padding: 0;
+  width: 525px;
   margin: -5px 0px 0px 0px;
-
   font-family: 'Lato', sans-serif;
-  font-size: 0.875em;
+  font-size: 16px;
   color: #b3aca7;
-
-  outline:none;
   cursor: pointer;
-
   border: solid 1px #b3aca7;
   border-top: none;
 }
