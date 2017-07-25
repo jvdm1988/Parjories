@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AboutComponent } from './about/about.component';
     HomePageComponent,
     LoginComponent,
     AboutComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
