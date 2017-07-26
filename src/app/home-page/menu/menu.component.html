@@ -17,8 +17,14 @@
     <h3> {{ bakery.name }}</h3>
     <p> ${{bakery.price }}</p>
     <button (click)="addToCart(bakery._id)" > Add to Cart </button><br>
-    <a [routerLink]="['/Edit']"> Edit</a> |
-    <a [routerLink]="['/Delete']"> Delete</a>
+
+
+<!-- If admin is logged in, show the add/edit/delete link -->
+<div *ngIf="isAdmin">
+    <a [routerLink]="['/admin']"> Add/Edit/Delete</a>
+  </div>
+
+
   </li>
 </ul>
 </div>

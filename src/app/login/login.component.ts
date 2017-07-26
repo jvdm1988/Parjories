@@ -36,29 +36,10 @@ export class LoginComponent implements OnInit {
  });
   }
 
-  doSignUp () {
-    this.auth.signup(this.fullNameValue, this.emailValue, this.passwordValue)
-    .then((resultFromApi) => {
-            // clear form
-            this.fullNameValue = "";
-            this.emailValue = "";
-            this.passwordValue = "";
-
-            // clear error message
-            this.errorMessage = "";
-
-            // redirect to /camels
-            this.routerThang.navigate(['/']);
-        })
-        .catch((err) => {
-            const parsedError = err.json();
-            this.errorMessage = parsedError.message;
-        });
-    } // close doSignUp()
-
   doLogin() {
     this.auth.login(this.loginEmail, this.loginPassword)
       .then((resultFromApi) => {
+          this.checklogin();
           // clear the form
           this.loginEmail = "";
           this.loginPassword = "";
@@ -74,5 +55,20 @@ export class LoginComponent implements OnInit {
           this.loginErrorMessage = parsedError.message;
       });
   } // close doLogin()
+
+  checklogin(){
+    this.auth.checklogin()
+      // If success, we are logged in.
+      .then((resultFromApi) => {
+        console.log("found user");
+          this.isLoggedOut = false;
+      })
+
+      // Even if you don't do anything on error, catch to avoid a console error.
+      .catch((err) => {
+        console.log("CATCH user");
+          this.isLoggedOut = true;
+      });
+  }
 
 }

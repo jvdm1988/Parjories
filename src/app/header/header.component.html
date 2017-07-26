@@ -12,12 +12,17 @@
         </a>
 
   <div class="dropdown" style="float:right;">
-  <button [routerLink]="['/login']" class="dropbtn">LOGIN</button>
-  <div class="dropdown-content">
+
+  <button *ngIf="isLoggedOut" [routerLink]="['/login']" class="dropbtn">LOGIN</button>
+
+  <button  *ngIf="!isLoggedOut" (click)="logout()" class="dropbtn">LOGOUT</button>
+
+
+  <div *ngIf="isLoggedOut" class="dropdown-content">
     <a [routerLink]="['/login']"> Login </a>
+      <hr>
     <a [routerLink]="['/signup']"> Sign Up</a>
-    <hr>
-    <a [routerLink]="['/']"> Logout</a>
+
   </div>
 </div>
 

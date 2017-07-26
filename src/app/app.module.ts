@@ -19,6 +19,7 @@ import { AboutComponent } from './about/about.component';
 import { CartComponent } from './cart/cart.component';
 import { SignupComponent } from './signup/signup.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     CartComponent,
     SignupComponent,
     CheckoutComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

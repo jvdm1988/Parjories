@@ -30,21 +30,13 @@ export class HeaderComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-      this.authThang.checklogin()
-        // If success, we are logged in.
-        .then((resultFromApi) => {
-            this.isLoggedOut = false;
-        })
-
-        // Even if you don't do anything on error, catch to avoid a console error.
-        .catch((err) => {
-            this.isLoggedOut = true;
-        });
+      this.checklogin();
     }
 
     doSignUp() {
       this.authThang.signup(this.fullNameValue, this.emailValue, this.passwordValue)
         .then((resultFromApi) => {
+            this.checklogin();
             // clear form
             this.fullNameValue = "";
             this.emailValue = "";
@@ -65,6 +57,7 @@ export class HeaderComponent implements OnInit {
     doLogin() {
       this.authThang.login(this.loginEmail, this.loginPassword)
         .then((resultFromApi) => {
+  
             // clear the form
             this.loginEmail = "";
             this.loginPassword = "";
@@ -83,7 +76,27 @@ export class HeaderComponent implements OnInit {
 
     logout() {
       this.authThang.logout()
-        .then(() => {console.log("Logged Out")})
+        .then(() => {
+          console.log("Logged Out")
+            this.checklogin();
+
+
+      })
         .catch(() => {console.log("Didn't log out")})
+    }
+
+    checklogin(){
+      this.authThang.checklogin()
+        // If success, we are logged in.
+        .then((resultFromApi) => {
+          console.log("found user");
+            this.isLoggedOut = false;
+        })
+
+        // Even if you don't do anything on error, catch to avoid a console error.
+        .catch((err) => {
+          console.log("CATCH user");
+            this.isLoggedOut = true;
+        });
     }
   }
