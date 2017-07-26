@@ -33,7 +33,7 @@ export class HeaderComponent implements OnInit {
       this.authThang.checklogin()
         // If success, we are logged in.
         .then((resultFromApi) => {
-            this.routerThang.navigate(['/login']);
+            this.isLoggedOut = false;
         })
 
         // Even if you don't do anything on error, catch to avoid a console error.
@@ -81,4 +81,9 @@ export class HeaderComponent implements OnInit {
         });
     } // close doLogin()
 
+    logout() {
+      this.authThang.logout()
+        .then(() => {console.log("Logged Out")})
+        .catch(() => {console.log("Didn't log out")})
+    }
   }

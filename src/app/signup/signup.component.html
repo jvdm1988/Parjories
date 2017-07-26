@@ -1,0 +1,49 @@
+<div class="form-box">
+
+<p *ngIf="errorMessage" class="error">
+  {{ errorMessage }}
+</p>
+
+  <h2> Sign Up </h2>
+
+  <br>
+  <br>
+
+  <form (ngSubmit)="doSignUp()">
+    <label for="full-name-input"> Full Name </label>
+    <br>
+    <input  id="full-name-input" type="text" placeholder="Name"
+        [(ngModel)]="fullNameValue" name="fullNameValue">
+
+    <br>
+    <br>
+
+    <label for="email-input"> Email </label>
+    <br>
+    <input  id="email-input" type="email" placeholder="example@email.com"
+        [(ngModel)]="emailValue" name="emailValue">
+
+    <br>
+    <br>
+
+    <label for="password-input"> Password </label>
+    <br>
+    <input  id="password-input" type="password" placeholder="*******"
+        [(ngModel)]="passwordValue" name="passwordValue">
+
+    <br>
+    <br>
+    <br>
+
+    <button> Sign Up </button>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+
+    <p>Already a member?</p>
+    <a [routerLink]="['/login']">Log In</a>
+  </form>
+
+</div>

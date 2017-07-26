@@ -30,4 +30,13 @@ export class ProductsService {
     .then (result => result.json());
 
   }
+
+  displayCart() {
+    return this.http.get(
+      this.baseUrl + 'api/displayCart',
+      { withCredentials: true }
+    )
+    .toPromise()
+    .then( res => res.json());
+  }
 }

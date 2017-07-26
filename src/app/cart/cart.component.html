@@ -1,3 +1,24 @@
-<p>
-  cart works!
-</p>
+
+<h2> Your cart </h2>
+
+<hr>
+
+<div class="user-info-box">
+<h4> user info </h4>
+</div>
+
+<div class="cart-items" *ngFor="let product of usersCart">
+  <img src="assets/{{product.photoUrl}}">
+  <p> {{product.name}} </p>
+  <a [routerLink]="['/cart']">
+         <span class="glyphicon glyphicon-trash"></span>
+       </a>
+</div>
+
+<hr>
+
+<h3> TOTAL </h3>
+
+<hr>
+
+<button [routerLink]="['/checkout']"> Check Out </button>

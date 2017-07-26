@@ -1,5 +1,5 @@
 .jumbotron {
-  height: 620px;
+  height: 800px;
   background:
     linear-gradient(
       rgba(0, 0, 0, 0.1),
@@ -13,7 +13,7 @@
 .intro-box {
   border: 1px solid white;
   width: 1200px;
-  height: 580px;
+  height: 760px;
   margin: -28px auto;
   padding: 70px;
 }
