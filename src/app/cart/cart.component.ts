@@ -29,4 +29,18 @@ export class CartComponent implements OnInit {
       })
   }
 
+  deleteFromCart(blh) {
+    console.log(blh);
+
+    this.usersCart.forEach((item, i) => {
+      if (blh === item) {
+      this.usersCart.splice(i, 1);
+      }
+
+    });
+
+  // this.item.delete();
+}
+
+
 }

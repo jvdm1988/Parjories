@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
   doLogin() {
     this.auth.login(this.loginEmail, this.loginPassword)
       .then((resultFromApi) => {
-          this.checklogin();
+
           // clear the form
           this.loginEmail = "";
           this.loginPassword = "";
@@ -49,6 +49,8 @@ export class LoginComponent implements OnInit {
 
           // redirect to /camels
           this.routerThang.navigate(['/']);
+          console.log("NOT WOOOOOOOOOORKING");
+            this.auth.checklogin();
       })
       .catch((err) => {
           const parsedError = err.json();

@@ -8,15 +8,16 @@ import { environment } from "../../environments/environment"
 @Injectable()
 export class ProductsService {
 
-  baseUrl: string = environment.apiBase 
+  baseUrl: string = environment.apiBase
 
   constructor(
     private http: Http
   ) { }
 
   getBakery(groupName) {
+
     return this.http.get(
-      this.baseUrl + 'api/menu/'+groupName
+      this.baseUrl + '/api/menu/'+groupName
     )
     .toPromise()
     .then( result => result.json());
@@ -25,7 +26,7 @@ export class ProductsService {
   addToCart(id) {
     console.log(id);
     return this.http.post(
-      this.baseUrl + 'api/addToCart/',
+      this.baseUrl + '/api/addToCart/',
       { idToAdd: id},
       { withCredentials: true }
     )
@@ -36,10 +37,14 @@ export class ProductsService {
 
   displayCart() {
     return this.http.get(
-      this.baseUrl + 'api/displayCart',
+      this.baseUrl + '/api/displayCart',
       { withCredentials: true }
     )
     .toPromise()
     .then( res => res.json());
+  }
+
+  removeItem(item){
+    
   }
 }

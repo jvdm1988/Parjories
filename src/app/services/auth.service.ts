@@ -38,6 +38,7 @@ export class AuthService {
 
 
   login(theEmail, thePassword) {
+    console.log("INSIDE GET LOGIN");
       return this.httpThang
         .post(
           environment.apiBase + "/api/login",

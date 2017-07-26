@@ -50,3 +50,7 @@ h3 {
   font-weight: 200;
   margin-left: 950px;
 }
+
+a {
+  cursor: pointer;
+}

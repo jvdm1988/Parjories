@@ -10,8 +10,9 @@
 <div class="cart-items" *ngFor="let product of usersCart">
   <img src="assets/{{product.photoUrl}}">
   <p> {{product.name}} </p>
-  <a [routerLink]="['/cart']">
-         <span class="glyphicon glyphicon-trash"></span>
+
+  <a (click)="deleteFromCart(product)">
+  <span class="glyphicon glyphicon-trash"></span>
        </a>
 </div>
 
