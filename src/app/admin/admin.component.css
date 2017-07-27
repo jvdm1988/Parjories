@@ -1,0 +1,26 @@
+.add-form {
+  margin: 120px auto;
+  border: 1px solid #d4d5d6;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px grey;
+  padding: 50px;
+  text-align: center;
+  width: 500px;
+}
+
+select {
+  width: 300px;
+}
+
+input, button {
+  width: 300px;
+}
+
+::-webkit-input-placeholder {
+  color: pink;
+  font-size: 12px;
+}
+
+hr {
+  width: 75%;
+}

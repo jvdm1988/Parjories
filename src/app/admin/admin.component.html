@@ -1,3 +1,29 @@
-<p>
-  admin works!
-</p>
+<div class="add-form">
+
+  <h2> Add new Item </h2>
+
+  <br>
+  <br>
+
+  <form (ngSubmit)="addNewItem()" #myForm="ngForm">
+    <p> Group </p>
+    <select class = "jess" [(ngModel)]="newItem.group">
+      <option value="Cupcakes" [value]="Cupcakes">Cupcakes</option>
+      <option value="Macarons" [value]="Macarons">Macarons</option>
+      <option value="Pies" [value]="Pies">Pies & Cakes</option>
+    </select><br><br>
+
+    <p> Image </p>
+    <input type="text" name="image" [(ngModel)]="newItem.image" required /><br><br>
+
+    <p> Item Name</p>
+    <input type="text" name="name" [(ngModel)]="newItem.name" required /><br><br>
+
+    <p> Price </p>
+    <input type="number" name="price" [(ngModel)]="newItem.price" required /><br><br>
+    <br>
+
+    <button type="submit"> Add new Item </button>
+  </form>
+
+</div>

@@ -58,4 +58,11 @@ export class ProductsService {
 
   }
 
+
+addNewItem(newItem) {
+  console.log(newItem);
+  let adminroute = "/admin"
+  return this.http.post(this.baseUrl+adminroute, newItem);
+}
+
 }

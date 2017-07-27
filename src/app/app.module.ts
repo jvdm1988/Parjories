@@ -21,6 +21,7 @@ import { SignupComponent } from './signup/signup.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { AdminComponent } from './admin/admin.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { EditComponent } from './edit/edit.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { GalleryComponent } from './gallery/gallery.component';
     CheckoutComponent,
     AdminComponent,
     GalleryComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,

@@ -43,5 +43,9 @@ export class CartComponent implements OnInit {
   // this.item.delete();
 }
 
+addNewItem() {
+  
+}
+
 
 }
