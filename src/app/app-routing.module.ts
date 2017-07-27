@@ -8,6 +8,7 @@ import { CartComponent } from "./cart/cart.component";
 import { SignupComponent } from "./signup/signup.component";
 import { CheckoutComponent } from "./checkout/checkout.component";
 import { AdminComponent } from './admin/admin.component';
+import { GalleryComponent } from "./gallery/gallery.component";
 
 const routes = [
   {
@@ -27,12 +28,20 @@ const routes = [
     component: AboutComponent
   },
   {
+    path: 'gallery',
+    component: GalleryComponent
+  },
+  {
     path: 'cart',
     component: CartComponent
   },
   {
     path: 'checkout',
     component: CheckoutComponent
+  },
+  {
+    path: 'edit/:id',
+    component: AdminComponent
   },
   {
     path: 'admin',

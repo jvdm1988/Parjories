@@ -20,6 +20,7 @@ import { CartComponent } from './cart/cart.component';
 import { SignupComponent } from './signup/signup.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { AdminComponent } from './admin/admin.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { AdminComponent } from './admin/admin.component';
     SignupComponent,
     CheckoutComponent,
     AdminComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,

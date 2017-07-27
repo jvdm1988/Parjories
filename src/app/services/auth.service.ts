@@ -1,11 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/toPromise';
 
 import { environment } from "../../environments/environment"
 
 @Injectable()
 export class AuthService {
+
+  private loggedInStatus = new Subject<any>();
+
+  loggedIn$ = this.loggedInStatus.asObservable();
+
+
 
   constructor(
     private httpThang: Http
@@ -33,12 +40,15 @@ export class AuthService {
         .toPromise()
 
         // Parse the JSON
-        .then(res => res.json());
+        .then(res => res.json())
+        .then((userInfo) => {
+          this.changeStatus(userInfo);
+          return userInfo;
+        });
   } // close signup()
 
 
   login(theEmail, thePassword) {
-    console.log("INSIDE GET LOGIN");
       return this.httpThang
         .post(
           environment.apiBase + "/api/login",
@@ -57,7 +67,11 @@ export class AuthService {
         .toPromise()
 
         // Parse the JSON
-        .then(res => res.json());
+        .then(res => res.json())
+        .then((userInfo) => {
+          this.changeStatus(userInfo);
+          return userInfo;
+        });
   } // close login()
 
 
@@ -77,7 +91,11 @@ export class AuthService {
         .toPromise()
 
         // Parse the JSON
-        .then(res => res.json());
+        .then(res => res.json())
+        .then((userInfo) => {
+          this.changeStatus(false);
+          return userInfo;
+        });
   } // close logout()
 
 
@@ -94,7 +112,15 @@ export class AuthService {
         .toPromise()
 
         // Parse the JSON
-        .then(res => res.json());
+        .then(res => res.json())
+        .then((userInfo) => {
+          this.changeStatus(userInfo);
+          return userInfo;
+        });
   } // close checklogin()
+
+  changeStatus(userStatus) {
+    this.loggedInStatus.next(userStatus);
+  }
 
 }

@@ -45,6 +45,17 @@ export class ProductsService {
   }
 
   removeItem(item){
-    
+
   }
+
+  deleteItem(id) {
+    console.log(id);
+    return this.http.get(
+      this.baseUrl + '/api/menu/delete/' + id,
+    )
+    .toPromise()
+    .then (result => result.json());
+
+  }
+
 }

@@ -7,7 +7,7 @@ import { ProductsService } from '../services/products.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-
+  userInfo = {};
   usersCart = [];
 
   constructor(
@@ -22,6 +22,7 @@ export class CartComponent implements OnInit {
     this.product.displayCart()
       .then((userInfo) => {
         console.log(userInfo);
+        this.userInfo = userInfo;
         this.usersCart = userInfo.cartArray;
       })
       .catch((err) => {

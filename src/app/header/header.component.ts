@@ -6,8 +6,7 @@ import { AuthService } from '../services/auth.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
-  providers: [AuthService]
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
   isLoggedOut: boolean = false;
@@ -31,6 +30,13 @@ export class HeaderComponent implements OnInit {
 
     ngOnInit() {
       this.checklogin();
+      this.authThang.loggedIn$.subscribe((userStatus) =>{
+        if (userStatus) {
+          this.isLoggedOut = false;
+        } else {
+          this.isLoggedOut = true;
+        }
+      })
     }
 
     doSignUp() {
@@ -57,7 +63,7 @@ export class HeaderComponent implements OnInit {
     doLogin() {
       this.authThang.login(this.loginEmail, this.loginPassword)
         .then((resultFromApi) => {
-  
+
             // clear the form
             this.loginEmail = "";
             this.loginPassword = "";
@@ -77,7 +83,6 @@ export class HeaderComponent implements OnInit {
     logout() {
       this.authThang.logout()
         .then(() => {
-          console.log("Logged Out")
             this.checklogin();
 
 
@@ -89,13 +94,11 @@ export class HeaderComponent implements OnInit {
       this.authThang.checklogin()
         // If success, we are logged in.
         .then((resultFromApi) => {
-          console.log("found user");
             this.isLoggedOut = false;
         })
 
         // Even if you don't do anything on error, catch to avoid a console error.
         .catch((err) => {
-          console.log("CATCH user");
             this.isLoggedOut = true;
         });
     }

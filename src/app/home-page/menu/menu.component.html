@@ -1,6 +1,10 @@
 <div class="menu">
 <h2> Menu </h2>
 
+<div *ngIf="isAdmin">
+    <a [routerLink]="['/admin']"> Add New Item</a>
+  </div>
+
 <div class="menu-buttons">
 <button (click)="getBakery('Cupcakes')"> Cupcakes </button>
 <button (click)="getBakery('Macarons')"> Macarons </button>
@@ -21,7 +25,8 @@
 
 <!-- If admin is logged in, show the add/edit/delete link -->
 <div *ngIf="isAdmin">
-    <a [routerLink]="['/admin']"> Add/Edit/Delete</a>
+    <a [routerLink]="['/edit', bakery._id]"> Edit</a> |
+    <a (click)="deleteItem(bakery._id, bakery.group)" > Delete</a>
   </div>
 
 
