@@ -21,7 +21,13 @@ button {
   background-color: #eff1f2;
   border: 1px solid #b3aca7;
   border-radius: 3px;
+  transition: 0.5s;
   width: 120px;
+}
+
+button:hover {
+  box-shadow: 5px 5px 5px grey;
+  padding: 7px;
 }
 
 .menu-items {
