@@ -20,12 +20,11 @@
     <img src="assets/{{bakery.photoUrl}}">
     <h3> {{ bakery.name }}</h3>
     <p> ${{bakery.price }}</p>
-    <button (click)="addToCart(bakery._id)" > Add to Cart </button><br>
+    <button id="addToCart"(click)="addToCart(bakery._id)" > Add to Cart </button><br>
 
 
 <!-- If admin is logged in, show the add/edit/delete link -->
 <div *ngIf="isAdmin">
-    <a [routerLink]="['/edit', bakery._id]"> Edit</a> |
     <a (click)="deleteItem(bakery._id, bakery.group)" > Delete</a>
   </div>
 

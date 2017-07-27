@@ -1,15 +1,17 @@
 h1 {
-  text-align: center;
-  margin: 50px;
+  margin: 20px;
 }
 
-hr {
-  width: 60%;
+img {
+  height: 250px;
+  width: 380px;
+  border-radius: 10px;
+  margin: 40px;
+  float: left;
 }
-
 
 p {
-  margin: 30px 350px;
+  margin: 50px 70px;
   font-size: 16px;
   font-weight: 200;
 }

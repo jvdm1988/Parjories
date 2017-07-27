@@ -18,13 +18,37 @@
   padding: 70px;
 }
 
-p {
-  /*font-family: "Cabin Condensed";*/
-  text-shadow: 2px 2px #56425e;
+h1 {
+  font-family: "Cabin Condensed";
+  text-shadow: 5px 5px 5px #f9576f;
   color: white;
+  font-size: 170px;
   text-align: center;
-  font-size: 32px;
-  margin-top: 190px;
+  margin-top: 160px;
+  font-weight: bold;
+  opacity: 0.9;
+}
+
+p {
+font-family: "Cabin Condensed";
+text-shadow: 5px 5px 5px #f9576f;
+color: white;
+font-size: 34px;
+text-align: center;
+font-weight: bold;
+}
+
+h5 {
+  border-radius: 3px;
+  background-color: white;
+  opacity: 0.9;
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #f9576f;
+  padding: 15px;
+  font-weight: lighter;
 }
 
 .form-wrapper {
