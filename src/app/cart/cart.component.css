@@ -51,6 +51,19 @@ h3 {
   margin-left: 950px;
 }
 
+h5 {
+  text-align: center;
+}
+
 a {
   cursor: pointer;
+}
+
+.user-icon {
+  border: 3px solid #d4d5d6;
+  border-radius: 360px;
+  padding: 20px;
+  height: 120px;
+  width: 120px;
+  margin-left: 60px;
 }
