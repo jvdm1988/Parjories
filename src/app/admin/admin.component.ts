@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../services/products.service';
+import  { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
@@ -19,6 +21,7 @@ export class AdminComponent implements OnInit {
 
   constructor(
   private products: ProductsService,
+  private routerThang: Router
   ) { }
 
   ngOnInit() {
@@ -26,14 +29,16 @@ export class AdminComponent implements OnInit {
 
 
   addNewItem(){
+    console.log(this.newItem.group);
   this.products.addNewItem(this.newItem).subscribe((response)=>{
-
+console.log(response);
     this.newItem = {
       group: "",
       image: "",
       name: "",
       price: ""
     }
+    this.routerThang.navigate(['/']);
   });
 }
 

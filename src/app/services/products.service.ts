@@ -61,8 +61,11 @@ export class ProductsService {
 
 addNewItem(newItem) {
   console.log(newItem);
-  let adminroute = "/admin"
-  return this.http.post(this.baseUrl+adminroute, newItem);
+  let adminroute = "/add-item"
+  return this.http.post(this.baseUrl+adminroute, newItem, (err, result) => {
+    if (err ){return err}
+    result => result.json();
+  });
 }
 
 }

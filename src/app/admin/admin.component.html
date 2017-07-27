@@ -7,10 +7,10 @@
 
   <form (ngSubmit)="addNewItem()" #myForm="ngForm">
     <p> Group </p>
-    <select class = "jess" [(ngModel)]="newItem.group">
-      <option value="Cupcakes" [value]="Cupcakes">Cupcakes</option>
-      <option value="Macarons" [value]="Macarons">Macarons</option>
-      <option value="Pies" [value]="Pies">Pies & Cakes</option>
+    <select class = "jess" name="newItem.group" [(ngModel)]="newItem.group">
+      <option name="newItem.group" ng-selected="true"  [attr.value]="Cupcakes" [value]="Cupcakes">Cupcakes</option>
+      <option name="newItem.group" value="Macarons" [attr.value]="Macarons">Macarons</option>
+      <option name="newItem.group" value="Pies" [attr.value]="Pies">Pies & Cakes</option>
     </select><br><br>
 
     <p> Image </p>
