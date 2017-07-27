@@ -1,10 +1,18 @@
+.form-horizontal {
+  width: 50%;
+  float: left;
+  margin-top: 110px;
+}
+
+
 body {
   margin: 50px auto;
   width: 600px;
 }
 
 .container {
-margin: 80px 430px;
+margin-top: 90px;
+margin-left: 750px;
 }
 
 /* CSS for Credit Card Payment form */
