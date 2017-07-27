@@ -7,7 +7,10 @@ import { ProductsService } from '../services/products.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  userInfo = {};
+  userInfo = {
+    fullName: "",
+    email: ""
+  };
   usersCart = [];
 
   constructor(
@@ -44,7 +47,7 @@ export class CartComponent implements OnInit {
 }
 
 addNewItem() {
-  
+
 }
 
 

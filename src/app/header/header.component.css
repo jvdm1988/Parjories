@@ -4,18 +4,24 @@
 }
 
 .header-logo a {
+  color: white;
   font-family: "Cabin Condensed";
-  color: #eaead3;
+  border-radius: 360px;
+  height: 50px;
+  height: 50px;
   font-size: 32px;
-  text-shadow: 1px 1px pink;
+  text-shadow: 1px 1px 3px white;
   letter-spacing: 3px;
-  padding-left: 10px;
+  padding: 7px;
+  height: 50px;
+  width: 50px;
   font-weight: lighter;
   text-decoration: none;
 }
 
 
 p {
+  color: #f9576f;
   padding: 7px;
 }
 

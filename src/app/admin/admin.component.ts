@@ -19,6 +19,10 @@ export class AdminComponent implements OnInit {
   price: ""
 }
 
+  Macarons;
+  Pies;
+  Cupcakes;
+
   constructor(
   private products: ProductsService,
   private routerThang: Router
