@@ -33,12 +33,13 @@ nav {
 
 .glyphicon {
   transition: 0.5s;
+  font-size: 20px;
 }
 
 .glyphicon:hover {
   color: #f9576f;
   opacity: 0.9;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 nav a {
