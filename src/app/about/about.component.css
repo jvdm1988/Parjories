@@ -2,19 +2,34 @@ h2 {
   margin: 20px;
 }
 
-img {
-  height: 250px;
-  width: 380px;
-  border-radius: 10px;
+.about-pic {
+  background-color:  #eff1f2;
+}
+
+.marjorie {
+  height: 350px;
+  width: 470px;
+  border-radius: 3px;
   margin: 40px;
-  float: left;
-  border-radius: 360px;
-  height: 400px;
-  width: 400px;
+  margin-left: 400px;
+  box-shadow: 5px 5px 5px gray;
 }
 
 p {
-  margin: 80px 200px;
+  margin: 0px 200px;
   font-size: 16px;
   font-weight: 200;
+}
+
+.arrow {
+  height: 280px;
+  width: 280px;
+  margin-top: -450px;
+  margin-left: 750px;
+  color: pink;
+}
+
+.about-text {
+  background-color: #e3eced;
+  padding: 100px;
 }
